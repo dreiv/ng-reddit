@@ -93,6 +93,7 @@
       true,
       "always"
     ],
+    "templates-use-public": true,
     "triple-equals": [
       true,
       "allow-null-check"
