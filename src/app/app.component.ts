@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
-  addArticle() {}
+
+  addArticle(title: string, link: string) {
+    console.log(`Adding article: ${title} and link: ${link}`);
+  }
 }
