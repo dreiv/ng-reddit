@@ -8,7 +8,7 @@
     "build": "ng build",
     "build:ci":
       "npm run test && ng build --prod -bh \"https://dreiv.github.io/ng-reddit/\"",
-    "test": "ng test --browser ChromeHeadless --single-run",
+    "test": "ng test --browser ChromeHeadless --single-run --sourcemaps=false",
     "watch": "ng test --browser ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",

@@ -1,5 +1,5 @@
 import { Article } from './article.model';
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
 import { NumberSymbol } from '@angular/common';
 
 @Component({
@@ -9,11 +9,9 @@ import { NumberSymbol } from '@angular/common';
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
-  article: Article;
+  @Input() article: Article;
 
-  constructor() {
-    this.article = new Article('Angular', 'http://angular.io', 10);
-  }
+  constructor() {}
 
   ngOnInit() {}
 
