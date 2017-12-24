@@ -1,3 +1,4 @@
+import { Article } from './article.model';
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { NumberSymbol } from '@angular/common';
 
@@ -8,25 +9,21 @@ import { NumberSymbol } from '@angular/common';
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
-  votes: number;
-  title: string;
-  link: string;
+  article: Article;
 
   constructor() {
-    this.title = 'Angular';
-    this.link = 'http://angular.io';
-    this.votes = 10;
+    this.article = new Article('Angular', 'http://angular.io', 10);
   }
 
   ngOnInit() {}
 
   upvote(): boolean {
-    this.votes++;
+    this.article.upvote();
     return false;
   }
 
   downvote(): boolean {
-    this.votes--;
+    this.article.downvote();
     return false;
   }
 }
