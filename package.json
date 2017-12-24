@@ -8,11 +8,13 @@
     "build": "ng build",
     "build:ci":
       "npm run test && ng build --prod -bh \"https://dreiv.github.io/ng-reddit/\"",
-    "test": "ng test --browser ChromeHeadless --single-run --sourcemaps=false",
+    "test": "ng test",
+    "test:pre":
+      "ng test --browser ChromeHeadless --single-run --sourcemaps=false --progress=false --log-level error",
     "watch": "ng test --browser ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precommit": "npm run lint && npm run test"
+    "precommit": "npm run lint && npm run test:pre"
   },
   "private": true,
   "dependencies": {
